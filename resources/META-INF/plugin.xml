@@ -2,7 +2,7 @@
     <id>com.github.luomingxu.idea</id>
     <name>IdeaEnhance</name>
     <version>1.0</version>
-    <vendor email="me@luomingxu.cn" url="https://github.com/LuomingXu/idea-plugin">Luoming Xu</vendor>
+    <vendor email="me@luomingxu.cn" url="https://github.com/LuomingXu">Luoming Xu</vendor>
 
     <description><![CDATA[
       Self-use idea plugin.<br>
