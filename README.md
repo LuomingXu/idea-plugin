@@ -2,6 +2,8 @@ Idea plugin
 =
     self-use idea plugin
 
+[![image](https://img.shields.io/badge/jetbrains%20plugin-v1.0-blue)](https://plugins.jetbrains.com/plugin/15769-ideaenhance)
+
 #### Features
 
 - from java file jump to its class file
