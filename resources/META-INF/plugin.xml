@@ -1,17 +1,18 @@
 <idea-plugin>
     <id>com.github.luomingxu.idea</id>
-    <name>SelfUseIdeaEnhance</name>
+    <name>IdeaEnhance</name>
     <version>1.0</version>
     <vendor email="me@luomingxu.cn" url="https://github.com/LuomingXu/idea-plugin">Luoming Xu</vendor>
 
     <description><![CDATA[
-      自用的idea插件.<br>
+      Self-use idea plugin.<br>
     ]]></description>
 
     <change-notes><![CDATA[
-       <p>1.0</p>
-      添加跳转到java文件对应的class文件<br>
-
+      <p>1.0</p>
+      <ul>
+      <li>From java file jump to its class file</li>
+      </ul>
     ]]>
     </change-notes>
 
@@ -28,7 +29,8 @@
     </extensions>
 
     <actions>
-        <action id="to_class_file" class="com.github.luomingxu.idea.Action" text="Go to Class File" description="Open java -&gt; class file">
+        <action id="to_class_file" class="com.github.luomingxu.idea.Action" text="Go to Class File"
+                description="Open java -&gt; class file">
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
         </action>
         <!-- Add your actions here -->
