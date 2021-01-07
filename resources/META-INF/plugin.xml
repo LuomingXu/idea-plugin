@@ -1,0 +1,37 @@
+<idea-plugin>
+    <id>com.github.luomingxu.idea</id>
+    <name>SelfUseIdeaEnhance</name>
+    <version>1.0</version>
+    <vendor email="me@luomingxu.cn" url="https://github.com/LuomingXu/idea-plugin">Luoming Xu</vendor>
+
+    <description><![CDATA[
+      自用的idea插件.<br>
+    ]]></description>
+
+    <change-notes><![CDATA[
+       <p>1.0</p>
+      添加跳转到java文件对应的class文件<br>
+
+    ]]>
+    </change-notes>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <notificationGroup id="Luo Notification Group" displayType="BALLOON" key="Luo Notify Group"/>
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <action id="to_class_file" class="com.github.luomingxu.idea.Action" text="Go to Class File" description="Open java -&gt; class file">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
+        <!-- Add your actions here -->
+    </actions>
+
+</idea-plugin>
