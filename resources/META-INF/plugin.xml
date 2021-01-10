@@ -1,14 +1,23 @@
-<idea-plugin>
+<idea-plugin require-restart="false">
     <id>com.github.luomingxu.idea</id>
     <name>IdeaEnhance</name>
-    <version>1.0</version>
+    <version>1.1</version>
     <vendor email="me@luomingxu.cn" url="https://github.com/LuomingXu">Luoming Xu</vendor>
 
     <description><![CDATA[
-      Self-use idea plugin.<br>
+      <h1>Self-use idea plugin.</h1>
+      <br>
+      <p>Features</p>
+      <ul>
+      <li>From java file jump to its class file</li>
+      </ul>
     ]]></description>
 
     <change-notes><![CDATA[
+      <p>1.1</p>
+      <ul>
+      <li>Fix some IDEA plugin config issue</li>
+      </ul>
       <p>1.0</p>
       <ul>
       <li>From java file jump to its class file</li>
@@ -17,7 +26,7 @@
     </change-notes>
 
     <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-    <idea-version since-build="173.0"/>
+    <idea-version since-build="203.0"/>
 
     <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
