@@ -1,4 +1,4 @@
-package com.github.luomingxu.idea;
+package com.github.luomingxu.idea.util;
 
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;

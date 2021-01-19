@@ -1,4 +1,4 @@
-package com.github.luomingxu.idea;
+package com.github.luomingxu.idea.util;
 
 import com.intellij.notification.NotificationGroup;
 import com.intellij.notification.NotificationGroupManager;
@@ -12,5 +12,9 @@ public class NotifyUtil {
 
     public static void info(String msg) {
         Notifications.Bus.notify(notificationGroup.createNotification(msg, MessageType.INFO));
+    }
+
+    public static void err(String msg) {
+        Notifications.Bus.notify(notificationGroup.createNotification(msg, MessageType.ERROR));
     }
 }

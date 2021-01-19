@@ -1,7 +1,7 @@
 <idea-plugin require-restart="false">
     <id>com.github.luomingxu.idea</id>
     <name>IdeaEnhance</name>
-    <version>1.1</version>
+    <version>1.2</version>
     <vendor email="me@luomingxu.cn" url="https://github.com/LuomingXu">Luoming Xu</vendor>
 
     <description><![CDATA[
@@ -10,10 +10,20 @@
       <p>Features</p>
       <ul>
       <li>From java file jump to its class file</li>
+      <li>Jump to module pom file</li>
+      <li>Open calss files' dir in Explore</li>
+      <li>Gen Arthas redefine cmd</li>
       </ul>
     ]]></description>
 
     <change-notes><![CDATA[
+      <p>1.2</p>
+      <ul>
+      <li>Go to pom file</li>
+      <li>Open class files' dir in Explore</li>
+      <li>My usual Arthas commands</li>
+      <li>Refactor code, actions</li>
+      </ul>
       <p>1.1</p>
       <ul>
       <li>Fix some IDEA plugin config issue</li>
@@ -31,6 +41,7 @@
     <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.java</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <notificationGroup id="Luo Notification Group" displayType="BALLOON" key="Luo Notify Group"/>
@@ -38,11 +49,44 @@
     </extensions>
 
     <actions>
-        <action id="to_class_file" class="com.github.luomingxu.idea.Action" text="Go to Class File"
-                description="Open java -&gt; class file">
+        <group id="IdeaEnhanceGroup" popup="true" text="Idea Enhance">
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
-        </action>
+            <add-to-group group-id="CutCopyPasteGroup" anchor="first"/>
+        </group>
+
         <!-- Add your actions here -->
+        <action id="to_class_file" class="com.github.luomingxu.idea.action.ClassFileAction" text="Go to Class File"
+                description="Open java -&gt; class file">
+            <add-to-group group-id="IdeaEnhanceGroup" anchor="first"/>
+        </action>
+
+        <action id="to_pom_file" class="com.github.luomingxu.idea.action.PomFileAction" text="Go to Pom File"
+                description="Open maven pom file">
+            <add-to-group group-id="IdeaEnhanceGroup" anchor="after" relative-to-action="to_class_file"/>
+        </action>
+
+        <action id="redefine" class="com.github.luomingxu.idea.action.ArthasRedefineAction" text="Redefine Class"
+                description="Open maven pom file">
+            <add-to-group group-id="IdeaEnhanceGroup" anchor="after" relative-to-action="to_pom_file"/>
+        </action>
+
+
+        <action id="open_class_file_dir" class="com.github.luomingxu.idea.action.OpenClassFileDirAction" text="Open Class Files's
+ Dir"
+                description="Open class files' dir in file explore">
+            <add-to-group group-id="IdeaEnhanceGroup" anchor="after" relative-to-action="redefine"/>
+        </action>
+        <group id="IdeaEnhanceSettingsGroup" popup="true" text="Settings">
+            <!--do not use<add-to-group group-id="IdeaEnhanceGroup" anchor="last"/>-->
+        </group>
+
+        <action id="set_full_dir" class="com.github.luomingxu.idea.action.setting.FullDirSetting" text="Set Full Dir"
+                description="Set is full dir">
+            <add-to-group group-id="IdeaEnhanceSettingsGroup" anchor="first"/>
+        </action>
     </actions>
 
+    <extensions defaultExtensionNs="com.intellij">
+        <projectService serviceImplementation="com.github.luomingxu.idea.settings.IdeaEnhanceState"/>
+    </extensions>
 </idea-plugin>
