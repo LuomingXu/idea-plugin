@@ -71,8 +71,7 @@
         </action>
 
 
-        <action id="open_class_file_dir" class="com.github.luomingxu.idea.action.OpenClassFileDirAction" text="Open Class Files's
- Dir"
+        <action id="open_class_file_dir" class="com.github.luomingxu.idea.action.OpenClassFileDirAction" text="Open Class Files' Dir"
                 description="Open class files' dir in file explore">
             <add-to-group group-id="IdeaEnhanceGroup" anchor="after" relative-to-action="redefine"/>
         </action>
