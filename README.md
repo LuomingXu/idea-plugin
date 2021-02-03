@@ -2,7 +2,7 @@ Idea plugin
 =
     self-use idea plugin
 
-[![image](https://img.shields.io/badge/jetbrains%20plugin-v1.2-blue)](https://plugins.jetbrains.com/plugin/15769-ideaenhance)
+[![image](https://img.shields.io/badge/jetbrains%20plugin-v1.3-blue)](https://plugins.jetbrains.com/plugin/15769-ideaenhance)
 
 #### Features
 
@@ -13,4 +13,4 @@ Idea plugin
 
 #### IntelliJ Platform Plugin SDK
 
-    IntelliJ IDEA IU-203.6682.168(Java 11.0.9)
+    IntelliJ IDEA IU-203.6682.168(Java 11.0.10)
