@@ -43,14 +43,12 @@ public class ClassFileAction extends BaseAction {
 
         VirtualFile virtualFile = LocalFileSystem.getInstance().findFileByPath(filePath);
         if (virtualFile != null) {
-            clipboardPath = filePath.replace(classFileName, "");
             new OpenFileDescriptor(project, virtualFile).navigate(true);
-
         } else {
             NotifyUtil.info("Can't find class file match this java file");
         }
 
         ClipboardUtil.set(clipboardPath);
-        NotifyUtil.info("File dir set to clipboard.");
+        NotifyUtil.info("Package path set to clipboard.");
     }
 }
