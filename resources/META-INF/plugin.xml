@@ -1,7 +1,7 @@
 <idea-plugin require-restart="false">
     <id>com.github.luomingxu.idea</id>
     <name>IdeaEnhance</name>
-    <version>1.3</version>
+    <version>1.3.1</version>
     <vendor email="me@luomingxu.cn" url="https://github.com/LuomingXu">Luoming Xu</vendor>
 
     <description><![CDATA[

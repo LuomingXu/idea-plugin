@@ -60,7 +60,7 @@ public class ArthasRedefineAction extends BaseAction {
                     String.format(
                             "sc -d %s.%s | grep classLoaderHash\n",
                             ((PsiJavaFile) psiFile).getPackageName(), psiClass.getName()));
-            sb.append("redefine -d ");
+            sb.append("redefine -c ");
             for (String item : classFileName) {
                 sb.append(String.format("/tmp/%s ", item));
             }

@@ -2,7 +2,7 @@ Idea plugin
 =
     self-use idea plugin
 
-[![image](https://img.shields.io/badge/jetbrains%20plugin-v1.3-blue)](https://plugins.jetbrains.com/plugin/15769-ideaenhance)
+[![image](https://img.shields.io/badge/jetbrains%20plugin-v1.3.1-blue)](https://plugins.jetbrains.com/plugin/15769-ideaenhance)
 
 #### Features
 
