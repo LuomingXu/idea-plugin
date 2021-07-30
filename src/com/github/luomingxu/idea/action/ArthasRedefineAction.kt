@@ -12,7 +12,6 @@ import com.intellij.psi.PsiElement
 import com.intellij.psi.PsiFile
 import com.intellij.psi.PsiJavaFile
 import java.io.File
-import java.util.*
 
 class ArthasRedefineAction : BaseAction() {
     override fun action(project: Project?, module: Module?, psiFile: PsiFile?, psiElement: PsiElement?) {
@@ -32,12 +31,16 @@ class ArthasRedefineAction : BaseAction() {
                 dir.listFiles()?.let {
                     for (item in it) {
                         if (psiClass.name?.let { it1 -> item.name.startsWith(it1) } == true) {
-                            try {
-                                val path = if (Util.isWin) item.canonicalPath.replace("\\", "/") else item.canonicalPath
-                                classFileName.add(path.replace(classFilePath, ""))
-                            } catch (e: Exception) {
-                                e.printStackTrace()
-                                NotifyUtil.err("Exception have occurred at file.getCanonicalPath()")
+                            val lastName: String = item.name.replace(psiClass.name!!, "")
+                            if (lastName.contentEquals(".class") || lastName.startsWith("$")) {
+                                try {
+                                    val path =
+                                        if (Util.isWin) item.canonicalPath.replace("\\", "/") else item.canonicalPath
+                                    classFileName.add(path.replace(classFilePath, ""))
+                                } catch (e: Exception) {
+                                    e.printStackTrace()
+                                    NotifyUtil.err("Exception have occurred at file.getCanonicalPath()")
+                                }
                             }
                         }
                     }

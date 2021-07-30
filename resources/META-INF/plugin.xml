@@ -1,7 +1,7 @@
 <idea-plugin require-restart="false">
     <id>com.github.luomingxu.idea</id>
     <name>IdeaEnhance</name>
-    <version>1.3.1</version>
+    <version>1.3.2</version>
     <vendor email="me@luomingxu.cn" url="https://github.com/LuomingXu">Luoming Xu</vendor>
 
     <description><![CDATA[
@@ -17,6 +17,15 @@
     ]]></description>
 
     <change-notes><![CDATA[
+    <p>1.3.2</p>
+    <ul>
+        <li>Optimizing queries for subclass files.</li>
+        <li>MainClass.class MainClassSub.class MainClass$1.class. Not include MainClassSub.class</li>
+    </ul>
+    <p>1.3.1</p>
+    <ul>
+        <li>Bug fix</li>
+    </ul>
     <p>1.3</p>
     <ul>
         <li>Go to class file only copy java file package to path type</li>
@@ -76,7 +85,8 @@
         </action>
 
 
-        <action id="open_class_file_dir" class="com.github.luomingxu.idea.action.OpenClassFileDirAction" text="Open Class Files' Dir"
+        <action id="open_class_file_dir" class="com.github.luomingxu.idea.action.OpenClassFileDirAction"
+                text="Open Class Files' Dir"
                 description="Open class files' dir in file explore">
             <add-to-group group-id="IdeaEnhanceGroup" anchor="after" relative-to-action="redefine"/>
         </action>
