@@ -4,3 +4,7 @@
 *.iml
 *.jar
 out
+build
+.gradle
+config.yml
+!gradle/wrapper/gradle-wrapper.jar

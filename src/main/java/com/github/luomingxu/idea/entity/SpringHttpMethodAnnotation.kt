@@ -1,0 +1,40 @@
+package com.github.luomingxu.idea.entity
+
+enum class SpringHttpMethodAnnotation(val clazzFullName: String, val method: HttpMethod?) {
+    Controller(
+        "org.springframework.stereotype.Controller",
+        null
+    ),
+    RestController(
+        "org.springframework.web.bind.annotation.RestController",
+        null
+    ),
+    FeignClient(
+        "org.springframework.cloud.openfeign.FeignClient",
+        null
+    ),
+    RequestMapping(
+        "org.springframework.web.bind.annotation.RequestMapping",
+        null
+    ),
+    GetMapping(
+        "org.springframework.web.bind.annotation.GetMapping",
+        HttpMethod.GET
+    ),
+    PostMapping(
+        "org.springframework.web.bind.annotation.PostMapping",
+        HttpMethod.POST
+    ),
+    PutMapping(
+        "org.springframework.web.bind.annotation.PutMapping",
+        HttpMethod.PUT
+    ),
+    PatchMapping(
+        "org.springframework.web.bind.annotation.PatchMapping",
+        HttpMethod.PATCH
+    ),
+    DeleteMapping(
+        "org.springframework.web.bind.annotation.DeleteMapping",
+        HttpMethod.DELETE
+    );
+}

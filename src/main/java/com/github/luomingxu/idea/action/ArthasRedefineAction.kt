@@ -1,6 +1,7 @@
 package com.github.luomingxu.idea.action
 
 import com.github.luomingxu.idea.util.ClipboardUtil
+import com.github.luomingxu.idea.util.GetAllApi
 import com.github.luomingxu.idea.util.NotifyUtil
 import com.github.luomingxu.idea.util.Util
 import com.intellij.openapi.module.Module

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 2048 2048">
+    <circle fill-opacity="0.6" r="1024" cx="1024" cy="1024" fill="#a85490"/>
+    <g transform="scale(0.34)">
+        <path fill-opacity="1" transform="translate(-77.72000000000003, 3800) rotate(180) scale(-1, 1)"
+              fill="#231f20" d="M47 1493h1139v-170h-467v-1323h-203v1323h-469v170z"/>
+        <path fill-opacity="1" transform="translate(1155.28, 3800) rotate(180) scale(-1, 1)" fill="#231f20"
+              d="M760 705q78 -20 133 -75.5t137 -221.5l203 -408h-217l-178 377q-77 161 -138.5 207.5t-160.5 46.5h-193v-631h-203v1493h416q246 0 377 -111t131 -321q0 -148 -80.5 -241.5t-226.5 -114.5zM346 1327v-530h221q145 0 216 65t71 199q0 129 -75.5 197.5t-219.5 68.5h-213z "/>
+        <path fill-opacity="1" transform="translate(2388.2799999999997, 3800) rotate(180) scale(-1, 1)"
+              fill="#231f20"
+              d="M616 1315l-213 -764h426zM494 1493h245l457 -1493h-209l-110 389h-523l-108 -389h-209z"/>
+        <path fill-opacity="1" transform="translate(3621.2799999999997, 3800) rotate(180) scale(-1, 1)"
+              fill="#231f20"
+              d="M1073 53q-77 -41 -158 -61.5t-172 -20.5q-287 0 -445.5 203t-158.5 571q0 366 159.5 570.5t444.5 204.5q91 0 172 -20.5t158 -61.5v-207q-74 61 -159 93t-171 32q-197 0 -295 -152t-98 -459q0 -306 98 -458t295 -152q88 0 172.5 32t157.5 93v-207z"/>
+        <path fill-opacity="1" transform="translate(4854.28, 3800) rotate(180) scale(-1, 1)" fill="#231f20"
+              d="M197 1493h886v-170h-684v-402h654v-170h-654v-581h703v-170h-905v1493z"/>
+    </g>
+</svg>

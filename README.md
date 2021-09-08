@@ -2,7 +2,7 @@ Idea plugin
 =
     self-use idea plugin
 
-[![image](https://img.shields.io/badge/jetbrains%20plugin-v1.3.1-blue)](https://plugins.jetbrains.com/plugin/15769-ideaenhance)
+[![image](https://img.shields.io/badge/jetbrains%20plugin-v1.4.0-blue)](https://plugins.jetbrains.com/plugin/15769-ideaenhance)
 
 #### Features
 
@@ -10,6 +10,7 @@ Idea plugin
 - jump to pom.xml
 - open class files' dir in Explore
 - gen Arthas redefine cmd (my common use)
+- spring all REST api
 
 #### IntelliJ Platform Plugin SDK
 

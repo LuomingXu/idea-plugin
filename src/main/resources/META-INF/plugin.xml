@@ -1,7 +1,7 @@
 <idea-plugin require-restart="false">
     <id>com.github.luomingxu.idea</id>
     <name>IdeaEnhance</name>
-    <version>1.3.2</version>
+    <version>1.4.0</version>
     <vendor email="me@luomingxu.cn" url="https://github.com/LuomingXu">Luoming Xu</vendor>
 
     <description><![CDATA[
@@ -58,7 +58,8 @@
     <depends>com.intellij.java</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <notificationGroup id="Luo Notification Group" displayType="BALLOON" key="Luo Notify Group"/>
+        <notificationGroup id="Luo Notification Group" displayType="BALLOON"/>
+        <projectService serviceImplementation="com.github.luomingxu.idea.search.ApiSearchConfiguration"/>
         <!-- Add your extensions here -->
     </extensions>
 
@@ -84,12 +85,12 @@
             <add-to-group group-id="IdeaEnhanceGroup" anchor="after" relative-to-action="to_pom_file"/>
         </action>
 
-
         <action id="open_class_file_dir" class="com.github.luomingxu.idea.action.OpenClassFileDirAction"
                 text="Open Class Files' Dir"
                 description="Open class files' dir in file explore">
             <add-to-group group-id="IdeaEnhanceGroup" anchor="after" relative-to-action="redefine"/>
         </action>
+
         <group id="IdeaEnhanceSettingsGroup" popup="true" text="Settings">
             <!--do not use<add-to-group group-id="IdeaEnhanceGroup" anchor="last"/>-->
         </group>
@@ -97,6 +98,12 @@
         <action id="set_full_dir" class="com.github.luomingxu.idea.action.setting.FullDirSetting" text="Set Full Dir"
                 description="Set is full dir">
             <add-to-group group-id="IdeaEnhanceSettingsGroup" anchor="first"/>
+        </action>
+
+        <action id="api_search_action" class="com.github.luomingxu.idea.action.ApiSearchAction" text="Spring Api Search"
+                description="ApiSearchAction">
+            <add-to-group group-id="IdeaEnhanceGroup" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt SLASH"/>
         </action>
     </actions>
 

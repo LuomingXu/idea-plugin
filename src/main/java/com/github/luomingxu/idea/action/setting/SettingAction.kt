@@ -10,7 +10,7 @@ import com.intellij.psi.PsiFile
 
 open class SettingAction : BaseAction() {
     override fun action(project: Project?, module: Module?, psiFile: PsiFile?, psiElement: PsiElement?) {
-        val state = project?.let { ServiceManager.getService(it, IdeaEnhanceState::class.java) }
+        val state = project?.getService(IdeaEnhanceState::class.java)
         set(state)
     }
 
