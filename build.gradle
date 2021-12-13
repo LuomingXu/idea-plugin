@@ -20,7 +20,7 @@ dependencies {
 intellij {
     updateSinceUntilBuild = true
     type = "IC"
-    version = "2021.2"
+    version = "2021.3"
     pluginName = 'IdeaEnhance'
 
     plugins = ['com.intellij.java']

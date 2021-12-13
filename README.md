@@ -10,8 +10,8 @@ Idea plugin
 - jump to pom.xml
 - open class files' dir in Explore
 - gen Arthas redefine cmd (my common use)
-- spring all REST api
+- search spring REST api
 
-#### IntelliJ Platform Plugin SDK
+#### Build Platform
 
-    IntelliJ IDEA IU-203.6682.168(Java 11.0.10)
+[IntelliJ IDEA 2021.3](build.gradle)
