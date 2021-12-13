@@ -10,7 +10,7 @@ Idea plugin
 - jump to pom.xml
 - open class files' dir in Explore
 - gen Arthas redefine cmd (my common use)
-- search spring REST api
+- search spring REST api (Ctrl + Alt + /)
 
 #### Build Platform
 
